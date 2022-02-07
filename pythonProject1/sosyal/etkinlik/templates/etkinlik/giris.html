@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>etkinlikler</h1>
+<a href="/ekle">Ekle</a>
+<table>
+    <tr>
+        <td>Adi</td>
+        <td>Turu</td>
+        <td>kapasite</td>
+        <td>Tarih</td>
+        <td>Sil</td>
+    </tr>
+    {% for etkinlik in etkinlikler %}
+    <tr>
+        <td>{{etkinlik.adi}}</td>
+        <td>{{etkinlik.turu}}</td>
+        <td>{{etkinlik.kapasite}}</td>
+        <td>{{etkinlik.tarih}}</td>
+        <td><a href="/sil/{{etkinlik.id}}">Sil</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
